@@ -13,10 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
+import med.voll.api.medico.DadosAtualizacaoMedico;
 import med.voll.api.medico.DadosCadastroMedico;
 import med.voll.api.medico.DadosListagemMedico;
 import med.voll.api.medico.Medico;
 import med.voll.api.repository.MedicoRepository;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 @RequestMapping("medicos")
@@ -33,5 +36,13 @@ public class MedicoController {
   @GetMapping
   public Page<DadosListagemMedico> listar(@PageableDefault(size = 15, sort = { "nome" }) Pageable paginacao) {
     return medicoRepository.findAll(paginacao).map(DadosListagemMedico::new);
+  }
+
+  @PutMapping
+  @Transactional
+  public void atualizar(@RequestBody @Valid DadosAtualizacaoMedico dados) {
+    var medico = medicoRepository.getReferenceById(dados.id());
+    medico.atualizarInformacoes(dados);
+
   }
 }
