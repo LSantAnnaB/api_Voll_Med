@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.auth0.jwt.JWT;
@@ -16,6 +17,7 @@ import med.voll.api.domain.usuario.Usuario;
 @Service
 public class TokenService {
 
+  @Value("${JWT_SECRET:12345678}")
   private String secret;
 
   public String gerarToken(Usuario usuario) {
