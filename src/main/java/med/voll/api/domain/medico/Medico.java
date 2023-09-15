@@ -30,7 +30,7 @@ public class Medico {
   private String telefone;
   private String crm;
   @Enumerated(EnumType.STRING)
-  private Especialidade Especialidade;
+  private Especialidade especialidade;
   @Embedded
   private Endereco endereco;
   private Boolean ativo;
@@ -41,7 +41,7 @@ public class Medico {
     this.email = dados.email();
     this.crm = dados.crm();
     this.telefone = dados.telefone();
-    this.Especialidade = dados.especialidade();
+    this.especialidade = dados.especialidade();
     this.endereco = new Endereco(dados.endereco());
 
   }
