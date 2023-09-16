@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import jakarta.persistence.EntityNotFoundException;
-import med.voll.api.domain.consulta.ValidacaoException;
 
 @RestControllerAdvice
 public class TratadorDeErros {

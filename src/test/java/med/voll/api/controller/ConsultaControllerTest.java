@@ -12,10 +12,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import med.voll.api.domain.consulta.AgendaConsultaService;
-import med.voll.api.domain.consulta.DadosAgendamentoConsulta;
-import med.voll.api.domain.consulta.DadosDetalhamentoConsulta;
-import med.voll.api.domain.medico.Especialidade;
+import med.voll.api.service.AgendaConsultaService;
+import med.voll.api.model.consulta.DadosAgendamentoConsulta;
+import med.voll.api.model.consulta.DadosDetalhamentoConsulta;
+import med.voll.api.model.medico.Especialidade;
 
 import org.springframework.security.test.context.support.WithMockUser;
 

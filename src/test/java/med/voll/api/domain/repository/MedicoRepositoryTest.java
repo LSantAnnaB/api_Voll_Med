@@ -3,9 +3,9 @@ package med.voll.api.domain.repository;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 
+import med.voll.api.repository.MedicoRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +16,11 @@ import org.springframework.test.context.ActiveProfiles;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import med.voll.api.domain.consulta.Consulta;
-import med.voll.api.domain.endereco.DadosEndereco;
-import med.voll.api.domain.medico.DadosCadastroMedico;
-import med.voll.api.domain.medico.Especialidade;
+import med.voll.api.model.endereco.DadosEndereco;
+import med.voll.api.model.medico.DadosCadastroMedico;
+import med.voll.api.model.medico.Especialidade;
 import med.voll.api.domain.medico.Medico;
-import med.voll.api.domain.paciente.DadosCadastroPaciente;
+import med.voll.api.model.paciente.DadosCadastroPaciente;
 import med.voll.api.domain.paciente.Paciente;
 
 @DataJpaTest

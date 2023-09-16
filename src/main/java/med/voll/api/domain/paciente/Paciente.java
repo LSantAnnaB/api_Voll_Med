@@ -11,6 +11,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.domain.endereco.Endereco;
+import med.voll.api.model.paciente.DadosAtualizacaoPaciente;
+import med.voll.api.model.paciente.DadosCadastroPaciente;
 
 @Getter
 @EqualsAndHashCode(of = "id")

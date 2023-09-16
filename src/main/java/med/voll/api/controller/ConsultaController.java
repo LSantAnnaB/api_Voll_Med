@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import med.voll.api.domain.consulta.AgendaConsultaService;
-import med.voll.api.domain.consulta.DadosAgendamentoConsulta;
+import med.voll.api.service.AgendaConsultaService;
+import med.voll.api.model.consulta.DadosAgendamentoConsulta;
 
 @Controller
 @RequestMapping("consulta")

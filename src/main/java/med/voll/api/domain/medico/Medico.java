@@ -13,6 +13,9 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.model.medico.DadosAtualizacaoMedico;
+import med.voll.api.model.medico.DadosCadastroMedico;
+import med.voll.api.model.medico.Especialidade;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")
