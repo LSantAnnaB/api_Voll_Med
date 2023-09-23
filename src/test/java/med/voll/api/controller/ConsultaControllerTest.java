@@ -44,7 +44,7 @@ public class ConsultaControllerTest {
   @Test
   @DisplayName("Deveria devolver código 400 quando informações invalidas")
   @WithMockUser
-  void testAgendarCenario01() throws Exception { // Adicione o "throws Exception"
+  void testAgendarCenario01() throws Exception {
     var response = mockMvc.perform(post("/consulta")).andReturn().getResponse();
 
     assertThat(response.getStatus()).isEqualTo(HttpStatus.BAD_REQUEST.value());
@@ -53,7 +53,7 @@ public class ConsultaControllerTest {
   @Test
   @DisplayName("Deveria devolver código 200 quando informações estao invalidas")
   @WithMockUser
-  void testAgendarCenario02() throws Exception { // Adicione o "throws Exception"
+  void testAgendarCenario02() throws Exception {
     var data = LocalDateTime.now().plusHours(1);
     var especialidade = Especialidade.CARDIOLOGIA;
     var dadosDetalhamento = new DadosDetalhamentoConsulta(null, 2l, 5l, data);
